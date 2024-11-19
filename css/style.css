@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root{
+    --Soft-red: hsl(7, 99%, 70%); 
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%); /** graphic design text  **/
+    --Dark-blue: hsl(198, 62%, 26%);  /** photography text **/ 
+    --Dark-moderate-cyan: hsl(168, 34%, 41%); /** footer **/
+     
+    /***  ### Neutral    ***/ 
+     
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%); 
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    ---Grayish-blue: hsl(210, 4%, 67%); 
+    --White: hsl(0, 0%, 100%);
+
+    /***** ##Fonts ****/
+    --barlow-font-family : "Barlow", serif;
+    --fraunces-font-family: "Fraunces", serif;
+    --barlow-600-weight: 600;
+    --fraunces-700-weight: 700;
+    --fraunces-900-weight: 900;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/********   UTILITY CLASSES   *********/
+.container-large {
+    max-width: 1440px;
+}
+
+body{
+    font-size: 18px;
+    font-family :var(--barlow-font-family);
+    font-weight: var(--barlow-600-weight);
+    color: var(--Dark-grayish-blue);
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--White);
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/desktop/image-header.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-top: 1.5em;
+}
+/**  Navbar styling **/
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.logo{
+    margin: auto 0;
+}
+.navbar ul{
+    display: flex;
+}
+
+ul{
+    list-style: none;
+}
+.navbar ul li a {
+    padding: .7em 1.4em;
+    display: block;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: .8em;
+}
+.contact{
+    border-radius: 25px;
+    background-color: var(--White);
+    color: var(--Very-dark-desaturated-blue);
+}
+.contact:hover{
+    color: var(--White);
+    background: rgb(156, 219, 250);
+    text-transform: uppercase;
+}
+header h1{
+    margin-top: 2em;
+    text-align: center;
+    font-family: var(--fraunces-font-family);
+    font-weight: var(--fraunces-900-weight);
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--White);
+}
+.arrow-img{
+    margin-top: 6em;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow-img img{
+    width: 2%;
+}
+.functions{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 70vh);
+}
+.grid-item{
+    font-size: .8em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 2em;
+}
+.grid-item h1{
+    width: 60%;
+    font-family: var(--fraunces-font-family);
+    font-size: 2em;
+    font-weight: var(--fraunces-700-weight);
+    color: var(--Very-dark-desaturated-blue);
+}
+.grid-item p{
+    width: 72%;
+}
+.learn-more{
+    font-size: 1em;
+    font-family: var(--fraunces-font-family);
+    font-weight: var(--fraunces-700-weight);
+    text-transform: uppercase;
+    color: var(--Very-dark-desaturated-blue);
+}
+.transform{ padding-left: 25%;}
+.egg{
+    background-image: url('../images/desktop/image-transform.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cup{
+    background-image: url('../images/desktop/image-stand-out.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.stand-out{padding-left: 25%;}
+.apple{
+    background-image: url('../images/desktop/image-graphic-design.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--Dark-desaturated-cyan);
+}
+.orange{
+    background-image: url('../images/desktop/image-photography.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--Dark-blue);
+}
+.bottom-placement{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    color: var(--Very-dark-desaturated-blue);
+}
+.bottom-placement h1 {
+    margin-top: 35%;
+    font-family: var(--fraunces-font-family);
+    font-weight: var(--fraunces-700-weight);
+}
+.bottom-placement p{
+    width: 60%;
+    margin-top: 1em;
+    text-align: center;
+    font-size: 1em;
+}
+
+/***Testimonial Section ***/
+.testimonials{
+    min-height: 100vh;
+}
+.container-md{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.testimonials h2{
+    margin: 3em 0;
+    text-align: center;
+    font-family: var(--fraunces-font-family);
+    font-weight: var(--fraunces-900-weight);
+    letter-spacing: 3px;
+    font-size: 2.5em;
+    color: var(---Grayish-blue);
+}
+.testimonials-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5em;
+}
+.personal-img{
+    border-radius: 50%;
+    width: 30%;
+}
+.person{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 4em;
+}
+.person p{
+    line-height: 1.5;
+    font-size: .9em;
+}
+.testimonials h3{
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 1.1em;
+    font-family: var(--fraunces-font-family);
+    font-weight: var(--fraunces-900-weight);
+}
+.personal-post{
+    color: var(---Grayish-blue);
+    margin-top: 1em;
+    font-weight: var(--barlow-600-weight);
+}
+.images-showcase{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.images-showcase img{
+    width: 100%;
+}
+
+
+/*** FOOTER  ***/
+footer{
+    text-align: center;
+    padding: 4em 0;
+    background-color: var(--Dark-moderate-cyan);
+}
+footer h1{
+    color: var(--Dark-desaturated-cyan);
+    font-size: 2em;
+    font-weight: var(--barlow-600-weight);
+    margin-bottom: 1.5em;
+}
+footer .links a{
+    padding:0 1em;
+    color: var(--Dark-desaturated-cyan);
+    opacity: .6;
+} 
+.social-media-links{
+    margin-top: 3.5em ;
+}
+.social-media-links a{
+    padding: 0 1em;
+
+}
