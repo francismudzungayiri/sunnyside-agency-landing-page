@@ -33,6 +33,7 @@
 /********   UTILITY CLASSES   *********/
 .container-large {
     max-width: 1440px;
+    margin: 0 auto;
 }
 
 body{
@@ -80,13 +81,36 @@ ul{
     font-weight: 600;
     transition: 0.3s;
     font-size: .8em;
+    position: relative;
 }
-.contact{
+.nav-link::after{
+    content: ' ';
+    position: absolute;
+    left: 12px;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--Yellow);
+    transition: width 1s;
+}
+.nav-link:hover::after{
+    width: 70%;
+}
+#hamburger{
+    display: none;
+}
+button{
+    padding: .7em 1.4em;
+    display: block;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: .7em;
     border-radius: 25px;
     background-color: var(--White);
     color: var(--Very-dark-desaturated-blue);
+    border: none;
 }
-.contact:hover{
+button:hover{
     color: var(--White);
     background: rgb(156, 219, 250);
     text-transform: uppercase;
@@ -115,7 +139,7 @@ header h1{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 70vh);
+    grid-template-rows: repeat(3, 65vh);
 }
 .grid-item{
     font-size: .8em;
@@ -142,6 +166,29 @@ header h1{
     font-weight: var(--fraunces-700-weight);
     text-transform: uppercase;
     color: var(--Very-dark-desaturated-blue);
+    position: relative;
+}
+#red-line{
+    content:'';
+    position: absolute;
+    background-color: var(--Soft-red);
+    width: 32%;
+    height: 6px;
+    border-radius: 10px;
+    bottom: 1px;
+    left:-2%;
+    opacity: .3;
+}
+#yellow-line{
+    content:'';
+    position: absolute;
+    background-color: var(--Yellow);
+    width: 32%;
+    height: 6px;
+    border-radius: 10px;
+    bottom: 1px;
+    left:-2%;
+    opacity: .3;
 }
 .transform{ padding-left: 25%;}
 .egg{
@@ -159,12 +206,21 @@ header h1{
     background-image: url('../images/desktop/image-graphic-design.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    color: var(--Dark-moderate-cyan);
+}
+.apple h1{
     color: var(--Dark-desaturated-cyan);
+}
+.apple p{
+    color: var(--Dark-moderate-cyan);
 }
 .orange{
     background-image: url('../images/desktop/image-photography.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    color: var(--Dark-blue);
+}
+.orange h1 + p{
     color: var(--Dark-blue);
 }
 .bottom-placement{
@@ -188,7 +244,7 @@ header h1{
 
 /***Testimonial Section ***/
 .testimonials{
-    min-height: 100vh;
+    min-height: 90vh;
 }
 .container-md{
     max-width: 1000px;
@@ -267,4 +323,52 @@ footer .links a{
 .social-media-links a{
     padding: 0 1em;
 
+}
+
+
+/**************  MOBILE VIEW   ********************/
+@media screen and (max-width: 500px) {
+    body{
+        font-size: 12px;
+        text-align: center; 
+    }
+    .container-large{
+        width: 100vw;
+    }
+    .navbar{
+        padding: 2vh 3vw;
+    }
+    #hamburger{
+        display: inline;
+    }
+    header h1{
+        width: 50%;
+        text-align: center;
+        margin: 40% auto;
+    }
+    .functions{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 50vh);
+    }
+    .testimonials-grid{
+        display: block;
+    }
+    .nav-links{
+        display: none;
+    }
+    .egg{
+        background-image: url('../images/mobile/image-transform.jpg');
+    }
+    .cup{
+        background-image: url('../images/mobile/image-stand-out.jpg');
+    }
+    .apple{
+        background-image: url('../images/mobile/image-graphic-design.jpg');
+    }
+    .orange{
+        background-image: url('../images/mobile/image-photography.jpg');
+    }
+    
 }
